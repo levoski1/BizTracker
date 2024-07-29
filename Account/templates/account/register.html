@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    <div class="message">
+        {%for message in messages %}
+        <ul>
+            {% if message.tags %}
+            <li class="{{ message.tags }}">
+                {{ message }}
+            </li>
+            {% endif %}
+        </ul>
+    {% endfor %}
+    </div>
+        
+    <form action="" method="post">
+        {% csrf_token %} <br><br>
+        <label>User Name: </label> 
+        <input type="username" name="username" required maxlength="200" placeholder="example"> <br><br>
+
+        <label>Email: </label>
+        <input type="email" name="email" required placeholder="example@gmail.com"> <br><br>
+
+        <label>Password: </label>
+        <input type="password" name="password1" required min="4" max="200" placeholder="must be five long"><br><br>
+
+        <label>Cormfirm password: </label>
+        <input type="password" name="password2" placeholder="Must match"> <br><br>
+
+        <input type="submit">
+
+    </form>
+</body>
+</html>
