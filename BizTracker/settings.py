@@ -84,7 +84,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -94,3 +94,37 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# setting up for deployment
+ENVIRONMENT = os.getenv('DJANGO_ENVIRONMENT', 'development')
+print(f'Loading settings for {ENVIRONMENT} environment')
+
+if ENVIRONMENT == 'production':
+    DEBUG = False
+
+    ALLOWED_HOSTS = ['yourdomain.com']
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'yourdbname',
+            'USER': 'yourdbuser',
+            'PASSWORD': 'yourdbpassword',
+            'HOST': 'yourdbhost',
+            'PORT': 'yourdbport',
+        }
+    }
+
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+else:
+    DEBUG = True
+
+    ALLOWED_HOSTS = []
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }

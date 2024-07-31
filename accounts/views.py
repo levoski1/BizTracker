@@ -49,6 +49,24 @@ def register_view(request):
 
     return render(request, 'auth/register.html')
 
-   
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username', '').strip()
+        password = request.POST.get('password', '').strip()
+
+        if (not username) or (not password):
+            messages.error(request, 'All field Required')
+            return redirect('auth:login')
+        
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('tracker:home')
+        else:
+            messages.error(request, 'Username or Password not match')
+            return redirect('auth:login')
+    return render(request,'auth/login.html')
+
+
 
 
