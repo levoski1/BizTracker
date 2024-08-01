@@ -42,7 +42,8 @@ def register_view(request):
             return redirect('auth:register')
 
         else:
-            User.objects.create_user(username=username, email=email, password=password1)
+            user = User.objects.create_user(username=username, email=email, password=password1)
+            login(request, user)
             messages.success(request, 'Successfully registered.')
             return redirect('tracker:home')
         
