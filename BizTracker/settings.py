@@ -57,6 +57,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'BizTracker.wsgi.application'
 
+LOGIN_URL = '/auth/login/'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -97,34 +98,34 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # setting up for deployment
-ENVIRONMENT = os.getenv('DJANGO_ENVIRONMENT', 'development')
-print(f'Loading settings for {ENVIRONMENT} environment')
+# ENVIRONMENT = os.getenv('DJANGO_ENVIRONMENT', 'development')
+# print(f'Loading settings for {ENVIRONMENT} environment')
 
-if ENVIRONMENT == 'production':
-    DEBUG = False
+# if ENVIRONMENT == 'production':
+#     DEBUG = False
 
-    ALLOWED_HOSTS = ['yourdomain.com']
+#     ALLOWED_HOSTS = ['yourdomain.com']
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'yourdbname',
-            'USER': 'yourdbuser',
-            'PASSWORD': 'yourdbpassword',
-            'HOST': 'yourdbhost',
-            'PORT': 'yourdbport',
-        }
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'yourdbname',
+#             'USER': 'yourdbuser',
+#             'PASSWORD': 'yourdbpassword',
+#             'HOST': 'yourdbhost',
+#             'PORT': 'yourdbport',
+#         }
+#     }
+
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# else:
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-else:
-    DEBUG = True
-
-    ALLOWED_HOSTS = []
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+}
