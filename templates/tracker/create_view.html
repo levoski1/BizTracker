@@ -11,10 +11,11 @@
         {% csrf_token %} <br> <br>
 
         <label> choose a category </label>
-        <select name="category" >
+        <select name="category" required>
+            <option value="" disabled selected>Select</option>
             <option value="income">Income</option>
             <option value="expenses">Expenses</option>
-            <option value="debt">Dept</option>
+            <option value="debt">Debt</option>
         </select>
 
         <br><br>

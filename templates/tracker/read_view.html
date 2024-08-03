@@ -6,10 +6,17 @@
     <title>Read View</title>
 </head>
 <body>
+    <h2>View Transaction</h2>
+    {% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor%}
+    {% endif %}
     <ul>
         {% for obj in objects %}
         <li>{{ obj.description }} | created by {{ obj.user }}</li>
-        <p><a href="{% url 'tracker:update' obj.id %}">update</a></p> <br><br>
+        <p><a href="{% url 'tracker:update' obj.id %}">update</a></p>
+        <p><a href="{% url 'tracker:delete' obj.id %}">Delete</a></p> <br> <br>
         {% endfor %}
     </ul>
 </body>
