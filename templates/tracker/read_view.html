@@ -14,8 +14,9 @@
     {% endif %}
     <ul>
         {% for obj in objects %}
-        <li>{{ obj.description }} | created by {{ obj.user }}</li>
-        <p><a href="{% url 'tracker:update' obj.id %}">update</a></p>
+        <li>{{ obj.text }} | created by {{ obj.user }}</li>
+        <p>Category:  {{obj.choice}} </p>
+        <p>Amount: {{obj.amount}} </p>
         <p><a href="{% url 'tracker:delete' obj.id %}">Delete</a></p> <br> <br>
         {% endfor %}
     </ul>

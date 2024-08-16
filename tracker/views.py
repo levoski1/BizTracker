@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from tracker.models import Transaction
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from tracker.utils import predict_category, preprocess_money
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -11,36 +13,30 @@ def index(request):
     return render(request, 'tracker/home.html')
 
 
-def create_view(request):
+def predict_view(request):
+    '''
+    Create a view to handle prediction requests
+    '''
     if request.method == 'POST':
-        description = request.POST.get('description').strip()
-        amount = request.POST.get('amount').strip()
-        choice = request.POST.get('category').strip()
-
+        input_text = request.POST.get('text')
         
-        if request.user.is_authenticated:
-            Transaction.objects.create(description=description,amount=amount,choice=choice, user=request.user)
-            return redirect('tracker:home')
-        else:
-            return redirect('auth:login')
-
-    return render(request, 'tracker/create_view.html')
-
-
-def update_view(request, transaction_id):
-    transaction = get_object_or_404(Transaction, pk=transaction_id)
-    if request.method == 'POST':
-        if request.user.id != transaction.user.id:
-            messages.error(request, 'Sorry! You cannot update this.')
-            return redirect('tracker:read')
-        transaction.description = request.POST.get('description').strip()
-        transaction.amount = request.POST.get('amount').strip()
-        transaction.choice = request.POST.get('choice').strip()
-        transaction.user = request.user
-        transaction.save()
-        return redirect('tracker:read')
+        monetary_predition = preprocess_money(input_text)
+        category = predict_category(input_text)
+        prediction = {
+            'input_text': input_text,
+            'monetary_predition': monetary_predition,
+            'category': category
+        }
+        if category == '' or  monetary_predition == '':
+            return JsonResponse({'prediction': prediction})
         
-    return render(request, 'tracker/update_view.html')
+        transact = Transaction(user=request.user, choice=category, amount=monetary_predition, text=input_text)
+        transact.save()
+        print(transact)
+        
+    return render(request, 'tracker/create_prediction.html')
+    
+   
 
 
 def read_view(request):
@@ -50,8 +46,11 @@ def read_view(request):
 
 def delete_view(request, transaction_id):
     transaction = get_object_or_404(Transaction, pk = transaction_id)
-    if request.user != transaction.user:
-        messages.error(request, 'You cannot delete this document')
-        return redirect('tracker:read')
+    #if request.user != transaction.user:
+    #messages.error(request, 'You cannot delete this document')
+    #return redirect('tracker:read')
+    
     transaction.delete()
     return redirect('tracker:read')
+
+

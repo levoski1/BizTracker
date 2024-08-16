@@ -6,8 +6,9 @@ app_name = 'tracker'
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('transaction/create/', views.create_view, name='create'),
+    path('transaction/predict/', views.predict_view, name='predict'),
     path('transaction/read/', views.read_view,name='read'),
-    path('transaction/update/<int:transaction_id>/', views.update_view, name='update'),
     path('transaction/delete/<int:transaction_id>/', views.delete_view, name='delete'),
+
+    
 ]
