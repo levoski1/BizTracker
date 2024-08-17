@@ -22,6 +22,7 @@ def predict_view(request):
         
         monetary_predition = preprocess_money(input_text)
         category = predict_category(input_text)
+        print(category)
         prediction = {
             'input_text': input_text,
             'monetary_predition': monetary_predition,

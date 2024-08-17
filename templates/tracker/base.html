@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    {% block head %}
+        <!-- Additional head content (like CSS links) goes here -->
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'tracker/css/base.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">BizTracker</div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'tracker:home' %}">Home</a></li>
+                <li><a href="{% url 'auth:dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'tracker:predict' %}">Predict</a></li>
+                <li><a href="{% url 'auth:login' %}">Login</a></li>
+                <li><a href="{% url 'auth:logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 BizTracker. All rights reserved.</p>
+            <div class="social-icons">
+                <!-- Icons could be added here -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

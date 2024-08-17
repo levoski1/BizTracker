@@ -9,6 +9,5 @@ urlpatterns = [
     path('transaction/predict/', views.predict_view, name='predict'),
     path('transaction/read/', views.read_view,name='read'),
     path('transaction/delete/<int:transaction_id>/', views.delete_view, name='delete'),
-
     
 ]

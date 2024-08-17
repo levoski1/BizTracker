@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
+{% extends 'tracker/base.html'%}
+
+
+{% block title %}Home {% endblock %}
+{% block content %}
+
+    <br> <br> <br> <br> <br>
     <h2>This is Home Page</h2>
     <ul>
         <li> <a href="{% url 'tracker:predict' %}">CREATE TRANSACTION</a> </li>
@@ -13,5 +12,5 @@
         <li> <a href="{% url 'tracker:read' %}">DELETE</a> </li>
         
     </ul>
-</body>
-</html>
+
+{% endblock %}

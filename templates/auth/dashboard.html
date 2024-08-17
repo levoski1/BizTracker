@@ -1,0 +1,40 @@
+{% extends 'tracker/base.html'%}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'auth/css/dashboard.css' %}">
+{% endblock %}
+
+{% block title %}My Dashboard{% endblock %}
+
+{% block content%}
+
+    <div class="dashboard-container">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-card">Total Income: ${{ total_income }}</div>
+            <div class="stat-card">Total Expenses: ${{ total_expenses }}</div>
+            <div class="stat-card">Total Debt: ${{ total_debt }}</div>
+        </div>
+
+         <!-- Recent Transactions Section -->
+        <div class="recent-transactions-section">
+            <h2>Recent Transactions</h2>
+            <ul>
+                <li>Bought groceries: -$50</li>
+                <li>Received salary: +$2,000</li>
+                <li>Paid rent: -$700</li>
+            </ul>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+            <h2>Financial Overview</h2>
+            <div class="chart-placeholder">
+                <!-- Placeholder for a chart (e.g., pie chart or bar chart) -->
+                Chart will be displayed here.
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
