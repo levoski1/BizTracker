@@ -1,0 +1,26 @@
+body::before{
+    display: block;
+    content: '';
+    height: 40px;
+}
+
+@media(min-width: 768px){                       /* what this media query is saying that as far as the webpage is wider than 768px that class should have that width*/
+    .news-input {
+        width: 50%;
+    }
+}
+
+.map{
+    margin-top: 50px;
+    margin-left: 10px;
+}   
+.map iframe{
+    border-radius: 20px;
+}
+.list-group-item a{
+    text-decoration: none;
+}
+.footerlinks a{
+    display:block;
+    text-decoration: none;
+}
