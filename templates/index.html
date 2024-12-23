@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootcampsite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+<!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="mypractice.html">BIZ INVENTORY</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navmenu">                      <!--the class id=navmenu here is what give the toggle button above what to display when toogled it has to be thesame in the (data-bs-target)--> 
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class=nav-link href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class=nav-link href="#">supply(store)</a>
+                </li>
+                <li class="nav-item">
+                    <a class=nav-link href="#">sales(product)</a>
+                </li>
+                <li class="nav-item">
+                    <a class=nav-link href="#">services</a>
+                </li>
+                <li class="nav-item">
+                    <a class=nav-link href="#">activities</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- section 1 -->
+    <section class="section1 bg-dark p-5 pb-lg-3 pt-lg-5 text-light">
+        <div class="container">
+            <div class="d-sm-flex text-sm-start text-center align-items-center justify-content-between">
+                <div>
+                    <h1>Welcome to <span class="text-warning">Biz Inventory</span></h1>
+                    <p class="lead">we are here to help you manage your business inventory</p>
+                    <p class="lead">our goal is to help you organise!</p>
+        
+                    <button class="btn btn-primary btn-sm-lg btn-sm">Learn More</button>
+                </div>
+                
+                <img src="./images/start.svg" class="img-fluid d-none d-sm-block" style="height:400px" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- section 2 -->  
+    <div class="section2 bg-primary p-3 text-light">
+        <div class="container">
+            <div class="d-md-flex align-items-center justify-content-between">       <!--the flex used in this class is programmed that anything more than the medium screen, the items should flex otherwise remain block with the given margin buttom -->
+    
+                <h3 class="mb-3 mb-md-0">Sign-up for our newsletter</h3>
+                
+                <div class="input-group news-input">
+                    <input type="text" class="form-control">
+                    <button class="btn btn-dark btn-lg" type="button">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- boxes -->
+    <div class="section bg-light p-5">
+        <div class="container">
+            <div class="row gap-3">
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-1-square"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Sign-up for Free</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                 Eaque culpa earum repudiandae est. Ipsa, sed.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-2-square"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Create your virtual shop</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                 Eaque culpa earum repudiandae est. Ipsa, sed.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-3-square"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Keep Using</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                 Eaque culpa earum repudiandae est. Ipsa, sed.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- why -->
+     <div class="section">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md">
+                    <img src="./images/middle0.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md p-5  text-dark text-start">
+                    <h2 class="pt-5">Why You should Choose to Organise your business inventory</h2>
+                    <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Optio aspernatur soluta id corporis beatae, quasi ducimus. 
+                        Sunt amet sequi repellendus?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquid 
+                        officia consequuntur distinctio, atque facere consequatur voluptatum culpa sint 
+                        qui perspiciatis enim provident cumque impedit aperiam eum non mollitia corporis hic 
+                        tempore similique? Sint, debitis dolorem odio eius nemo accusantium!</p>
+                    <a href="#" class="btn btn-light mt-3"><i class="bi bi-chevron-right"></i>Read More
+                    </a>
+                </div> 
+            </div>
+        </div>
+     </div>
+     <!-- section3 -->
+     <div class="section bg-dark ">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md p-5  text-light text-start">
+                    <h2 class="pt-5">Stay out of Business Confusion</h2>
+                    <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Optio aspernatur soluta id corporis beatae, quasi ducimus. 
+                        Sunt amet sequi repellendus?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquid 
+                        officia consequuntur distinctio, atque facere consequatur voluptatum culpa sint 
+                        qui perspiciatis enim provident cumque impedit aperiam eum non mollitia corporis hic 
+                        tempore similique? Sint, debitis dolorem odio eius nemo accusantium!</p>
+                    <a href="#" class="btn btn-light mt-3"><i class="bi bi-chevron-right"></i>Read More
+                    </a>
+                </div>
+                <div class="col-md">
+                    <img src="./images/undraw_in-thought_xa50.svg" class="img-fluid" style="height: 400px;" alt="">
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- accordian -->
+     <div class="section p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Question</h2>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <!-- item-1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                      How can i Sign-up
+                    </button>
+                  </h2>
+                  <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem harum deleniti magni quaerat laudantium excepturi blanditiis,
+                         perspiciatis culpa accusamus provident numquam repellendus similique animi obcaecati eligendi totam consectetur velit vel facere id nesciunt mollitia?
+                          Inventore sequi eos nemo labore sint?</div>
+                  </div>
+                </div>
+                <!-- item-2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two">
+                      Is my business data safe within this platform
+                    </button>
+                  </h2>
+                  <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem harum deleniti magni quaerat laudantium excepturi blanditiis,
+                         perspiciatis culpa accusamus provident numquam repellendus similique animi obcaecati eligendi totam consectetur velit vel facere id nesciunt mollitia?
+                          Inventore sequi eos nemo labore sint?</div>
+                  </div>
+                </div>
+                <!-- item-3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three">
+                      can the system auto-calculate my profit/loss
+                    </button>
+                  </h2>
+                  <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem harum deleniti magni quaerat laudantium excepturi blanditiis,
+                         perspiciatis culpa accusamus provident numquam repellendus similique animi obcaecati eligendi totam consectetur velit vel facere id nesciunt mollitia?
+                          Inventore sequi eos nemo labore sint?</div>
+                  </div>
+                </div>
+                <!-- item-4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-four">
+                      is the platform suitable for my small business
+                    </button>
+                  </h2>
+                  <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem harum deleniti magni quaerat laudantium excepturi blanditiis,
+                         perspiciatis culpa accusamus provident numquam repellendus similique animi obcaecati eligendi totam consectetur velit vel facere id nesciunt mollitia?
+                          Inventore sequi eos nemo labore sint?</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- client testimony card -->
+    <div class="section p-5 bg-secondary">
+        <div class="container">
+            <h2 class="text-center text-white">Testimonials</h2>
+            <p class=" text-center text-warning fw-semibold">Hear testimonies from our 20+ happy small/medium scale business owners using this platform</p>
+            <div class="row g-2">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-white">
+                        <div class="card-body text-center text-dark">
+                            <img src="https://randomuser.me/api/portraits/men/14.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">John Doe</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus 
+                                eligendi dicta</p>
+                            <p class="card-text text-warning">omega fishery.ng</p>
+                            <a href="#"><i class="bi bi-twitter mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook mx-1"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-white">
+                        <div class="card-body text-center text-dark">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">katti James</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus 
+                                eligendi dicta</p>
+                            <p class="card-text text-warning">spice retail uk</p>
+                            <a href="#"><i class="bi bi-twitter mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook mx-1"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-white">
+                        <div class="card-body text-center text-dark">
+                            <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">Mark Belt</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus 
+                                eligendi dicta</p>
+                            <p class="card-text text-warning">veggimart.ng</p>
+                            <a href="#"><i class="bi bi-twitter mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook mx-1"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-white">
+                        <div class="card-body text-center text-dark">
+                            <img src="https://randomuser.me/api/portraits/women/14.jpg" class="rounded-circle mb-3" alt="">
+                            <h3 class="card-title mb-3">Sarah jones</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus 
+                                eligendi dicta</p>
+                            <p class="card-text text-warning">westGate.ng</p>
+                            <a href="#"><i class="bi bi-twitter mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook mx-1"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact section -->
+     <div class="section p-4 bg-dark text-white">
+        <div class="container">
+            <h1 class="text-center pt-3">Design by lasop <span class="text-warning lead">websolutions</span></h1>
+            <div class="row">
+                <div class="col-md">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6665.173264848073!2d3.373611752408914!3d6.630058475287723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91e03948cd71%3A0x2e0be200b973a83e!2sLagos%20School%20of%20Programming%20(LASOP)!5e0!3m2!1sen!2sng!4v1734875004394!5m2!1sen!2sng" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md text-start p-5">
+                    <div class="row">
+                        <h4>Contact Us</h4>
+                        <div class="footerlinks">
+                            <i class="bi bi-geo-alt mx-1"> No. 86, Olowoira Road, Solomon Avenue Junction, Oloworia,off ojudu-Berger lagos</i>
+                            <a href="tell:+2347068807770"><i class="bi bi-telephone mx-1"></i> +234706880770</a>
+                            <a href="mailto:reforuemu@yahoo.com"><i class="bi bi-envelope mx-1"></i> info@ruemu.net</a>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-md pt-5">
+                            <h4>LINKS</h4>
+                            <p>Home</p>
+                            <p>About</p>
+                            <p>Testimonials</p>
+                            <p>faQs</p>
+                            <p>Blogs</p>
+                            <p>Terms & condition</p>
+                        </div>
+                        <div class="col-md pt-5">
+                            <h4>Socials</h4>
+                            <div class="footerlinks">
+                                <a href="#"><i class="bi bi-twitter mx-1"></i> twitter</a>
+                                <a href="#"><i class="bi bi-facebook mx-1"></i> facebook</a>
+                                <a href="#"><i class="bi bi-whatsapp mx-1"></i> whatsapp</a>
+                                <a href="#"><i class="bi bi-instagram mx-1"></i> instagram</a>
+                                <a href="#"><i class="bi bi-linkedin mx-1"></i> linkedin</a>   
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>  
+            </div>
+            <div>
+                <div class="container position-relative">
+                    <p class="lead">copywrite &copy; 2024 lasopwebsev.</p>
+
+
+                    <a href="#" class="position-absolute bottom-0 end-0 pt-5"><i class="bi bi-arrow-up-circle h1"></i></a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
